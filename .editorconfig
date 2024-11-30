@@ -1,0 +1,99 @@
+root = true
+
+[*]
+encoding = utf-8
+indent_style = tab
+indent_size = 4
+
+##################################
+# Turn on all analyzers
+##################################
+dotnet_analyzer_diagnostic.severity = warning
+
+##################################
+# Turn off some stuff
+##################################
+
+dotnet_diagnostic.CA1031.severity = none # CA1031: Do not catch general exception types
+dotnet_diagnostic.CA1055.severity = none # CA1055: URI-like return values should not be strings
+dotnet_diagnostic.CA1308.severity = none # CA1308: Normalize strings to uppercase
+dotnet_diagnostic.CA1848.severity = none # CA1848: Use the LoggerMessage delegates
+dotnet_diagnostic.CA2008.severity = none # CA2008: Do not create tasks without passing a TaskScheduler
+dotnet_diagnostic.CS1591.severity = none # CS1591: Missing XML comment for publicly visible type or member
+dotnet_diagnostic.IDE0008.severity = none # IDE0008: Use explicit type
+dotnet_diagnostic.IDE0021.severity = none # IDE0021: Use block body for constructors
+dotnet_diagnostic.IDE0022.severity = none # IDE0022: Use expression body for methods
+dotnet_diagnostic.IDE0025.severity = none # IDE0025: Use expression body for properties
+dotnet_diagnostic.IDE0027.severity = none # IDE0027: Use expression body for accessors
+dotnet_diagnostic.IDE0058.severity = none # IDE0058: Expression value is never used
+dotnet_diagnostic.IDE0160.severity = none # IDE0160: Convert to block scoped namespace
+
+##################################
+# Naming
+##################################
+
+# Naming rules
+
+dotnet_naming_rule.interface_should_be_begins_with_i.severity = warning
+dotnet_naming_rule.interface_should_be_begins_with_i.symbols = interface
+dotnet_naming_rule.interface_should_be_begins_with_i.style = begins_with_i
+
+dotnet_naming_rule.types_should_be_pascal_case.severity = warning
+dotnet_naming_rule.types_should_be_pascal_case.symbols = types
+dotnet_naming_rule.types_should_be_pascal_case.style = pascal_case
+
+dotnet_naming_rule.non_field_members_should_be_pascal_case.severity = warning
+dotnet_naming_rule.non_field_members_should_be_pascal_case.symbols = non_field_members
+dotnet_naming_rule.non_field_members_should_be_pascal_case.style = pascal_case
+
+# Symbol specifications
+
+dotnet_naming_symbols.interface.applicable_kinds = interface
+dotnet_naming_symbols.interface.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_symbols.interface.required_modifiers = 
+
+dotnet_naming_symbols.types.applicable_kinds = class, struct, interface, enum
+dotnet_naming_symbols.types.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_symbols.types.required_modifiers = 
+
+dotnet_naming_symbols.non_field_members.applicable_kinds = property, event, method
+dotnet_naming_symbols.non_field_members.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_symbols.non_field_members.required_modifiers = 
+
+# Naming styles
+
+dotnet_naming_style.begins_with_i.required_prefix = I
+dotnet_naming_style.begins_with_i.required_suffix = 
+dotnet_naming_style.begins_with_i.word_separator = 
+dotnet_naming_style.begins_with_i.capitalization = pascal_case
+
+dotnet_naming_style.pascal_case.required_prefix = 
+dotnet_naming_style.pascal_case.required_suffix = 
+dotnet_naming_style.pascal_case.word_separator = 
+dotnet_naming_style.pascal_case.capitalization = pascal_case
+
+dotnet_naming_style.pascal_case.required_prefix = 
+dotnet_naming_style.pascal_case.required_suffix = 
+dotnet_naming_style.pascal_case.word_separator = 
+dotnet_naming_style.pascal_case.capitalization = pascal_case
+
+##################################
+# Style
+##################################
+
+csharp_using_directive_placement = outside_namespace:warning
+csharp_style_namespace_declarations = file_scoped:warning
+dotnet_style_prefer_conditional_expression_over_return = false # IDE0046: Convert to conditional expression
+
+dotnet_diagnostic.SA1000.severity = none # SA1000: Keywords should be spaced correctly
+dotnet_diagnostic.SA1027.severity = none # SA1027: Use tabs correctly
+dotnet_diagnostic.SA1101.severity = none # SA1101: Prefix local calls with this
+dotnet_diagnostic.SA1124.severity = none # SA1124: Do not use regions
+dotnet_diagnostic.SA1309.severity = none # SA1309: Field names should not begin with underscore
+dotnet_diagnostic.SA1600.severity = none # SA1600: Elements should be documented
+dotnet_diagnostic.SA1611.severity = none # SA1611: Element parameters should be documented
+dotnet_diagnostic.SA1615.severity = none # SA1615: Element return value should be documented
+dotnet_diagnostic.SA1618.severity = none # SA1618: Generic type parameters should be documented
+dotnet_diagnostic.SA1623.severity = none # SA1623: Property summary documentation should match accessors
+dotnet_diagnostic.SA1633.severity = none # SA1633: File should have header
+dotnet_diagnostic.SA1642.severity = none # SA1642: Constructor summary documentation should begin with standard text
